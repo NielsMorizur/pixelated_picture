@@ -13,10 +13,19 @@ void setup() {
   
   int i = 0;
   while (i < 1000) {
-    
+    myPixels.add( new Pixel() );
+    i++;
   }
 }
 
 void draw() {
   image(demon,0,0);
+
+  int i = 0;
+  while (i < 1000) {
+   Pixel p = myPixels.get(i); 
+   p.act();
+   p.show();
+   i++;
+  }
 }
